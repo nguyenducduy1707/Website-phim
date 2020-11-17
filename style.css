@@ -1,0 +1,192 @@
+/* -------------------Chống copy, bôi đen--------------------------------------------------------- */
+body{
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+/*  -------------------------------------------Navbar---------------------------------------------------------------------------- */
+.navbar {
+    width: 100%;
+    top: 0px;
+    background-color: rgba(40,40,40);
+    font-family: cinzel;
+    font-weight: bold;
+}
+.sticky-top {
+    position: fixed;
+}
+.dropdown-menu {display: block;visibility: hidden;opacity:0;transform: translateY(50px);transition:.5s ease all;}
+.dropdown-menu.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.5s ease all;}
+
+.bg-dark {
+    background: rgba(40,40,40,0.7) !important;
+    transition:0.2s ease;
+}
+.bg-dark.scrolled {
+    background: rgba(40,40,40) !important;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  --------------------------------------------Header video--------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Poppins:20");
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+}
+/* ----------Chữ phần header------------------------------ */
+.header-background {
+    position: relative;
+    line-height: 0;
+}
+.header-background  h4 {
+    position: absolute;
+    z-index: 1;
+    margin-left: 20px;
+    bottom: 106px;
+    font-family: cinzel;
+    overflow: hidden;
+}
+.header-background #amazingslider-wrapper-3 {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.9;
+    width: 100%;
+}
+.fa-info-circle {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 24px !important;
+    border-radius: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------Bật tắt video background screen------------------------------ */
+.fa-play-circle, .fa-pause-circle{
+    margin: 20px 10px 0 20px !important;
+    padding: 0 !important;
+    font-size: 44px !important;
+    border-radius: 100%;
+}
+#divPlay {
+    position: relative;
+}
+#divPlay #clickToGetSomeFun {
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.5;
+    font-family: cinzel;
+    margin-left: 10px;
+    font-size: 26px;
+    display: inline-block
+}
+#video-fullscreen {
+    z-index: -1 ;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 0.1;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------Main--------------------------------------------------------------- */
+/* -------------------Làm mờ nút play------------------ */
+div .amazingslider-play-1, div .amazingslider-play-2, div .amazingslider-play-4, div .amazingslider-play-5, div .amazingslider-play-6 {
+    opacity: 0;
+    height: 110%;
+    width: 110%;
+    top: 0;
+    left: 0;
+}
+p {
+    font-size: 60px;
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------Footer------------------------------------------------------------ */
+.footer-row {
+    width: 100%;
+}
+.footer-row li {
+    margin-bottom: 10px;
+    font-family: cinzel;
+    font-size: 20px;
+}
+ul {
+    list-style-type: none;
+}
+.icon {
+    margin-left: 15px;
+    height: 70px;
+}
+.fa {
+    padding: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px ;
+    border-radius: 50%;
+    color: gray;
+    font-size: 35px;
+    margin: 3px;
+}
+.fa:hover {
+    opacity: 0.7;
+    cursor: pointer  ;
+}
