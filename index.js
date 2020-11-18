@@ -1,12 +1,12 @@
-// Chống copy, bôi đen trang web
+// // Chống copy, bôi đen trang web
     $(document).ready(function(){
     $('*').bind('cut copy paste contextmenu', function (e) {
         e.preventDefault();
     })});
 
-// Lướt xuống hiên rõ thanh bar
+// // Lướt xuống hiên rõ thanh bar
 $(window).scroll(function() {
-    $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
 })
 
 // Volume screen
@@ -21,3 +21,4 @@ btnPlayPause.onclick = function() {
         btnPlayPause.innerHTML = ` <i class="fa fa-play-circle"></i>`
     }
 }
+//

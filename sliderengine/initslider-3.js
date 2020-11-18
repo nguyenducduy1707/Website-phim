@@ -60,7 +60,7 @@ jQuery(document).ready(function(){
 
         fullwidth:true,
 
-        randomplay:false,
+        randomplay:true,
 
         scalemode:"fill",
 
