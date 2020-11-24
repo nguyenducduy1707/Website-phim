@@ -30,9 +30,16 @@ body{
     background: rgba(40,40,40,1) !important;
 }
 /* ----Respnsive video youtube----- */
-#videoPhanTimKiem iframe {
+#videoPhanTimKiem > iframe {
     width: 100% !important;
     height: 315px !important;
+}
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 65vh;
+    overflow-y: auto;
 }
 
 
@@ -196,6 +203,8 @@ ul {
     width: 100%;
     border: 1px solid #ddd;
     font-size: 18px;
+    height: 80vh;
+
 }
 
 #myTable th, #myTable td {

@@ -16,9 +16,9 @@
 
     <!-- Font icon -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 </head>
 <body>
     <div class="wrapper-all">
@@ -102,18 +102,18 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel" style="color: black; !important">
+              <h5 class="modal-title" id="staticBackdropLabel" style="color: black;">
                 <input class="form-control" type="search" placeholder="Titles" aria-label="Search" id="myInput" onkeyup="myFunction()">
               </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body" style="color: black; !important">
+            <div class="modal-body" style="color: black;" id="bodyModal">
               <table id="myTable">
                 <tr class="header">
-                  <th style="width:60%;">Name</th>
-                  <th style="width:40%;">Preview</th>
+                  <th style="width:40%;" id="nameColumn">Name</th>
+                  <th style="width:60%;" id="previewColumn">Preview</th>
                 </tr>
               </table>
             </div>
