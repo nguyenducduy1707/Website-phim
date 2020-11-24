@@ -1,11 +1,11 @@
 /* -------------------Chống copy, bôi đen--------------------------------------------------------- */
-/* body{
+body{
     -moz-user-select: none;
     -ms-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-} */
+}
 
 /*  -------------------------------------------Navbar---------------------------------------------------------------------------- */
 .navbar {
@@ -21,6 +21,7 @@
 .dropdown-menu {display: block;visibility: hidden;opacity:0;transform: translateY(50px);transition:.5s ease all;}
 .dropdown-menu.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.5s ease all;}
 
+/* ------Cuộn lên xuống làm mờ thanh nav------ */
 .bg-dark {
     background: rgba(40,40,40,0.9) !important;
     transition:0.2s ease;
@@ -28,7 +29,8 @@
 .bg-dark.scrolled {
     background: rgba(40,40,40,1) !important;
 }
-iframe {
+/* ----Respnsive video youtube----- */
+#videoPhanTimKiem iframe {
     width: 100% !important;
     height: 315px !important;
 }
@@ -94,35 +96,16 @@ body{
 
 
 
-/* ----------------------------------------------Bật tắt video background screen------------------------------ */
-.fa-play-circle, .fa-pause-circle{
-    margin: 20px 10px 0 20px !important;
-    padding: 0 !important;
-    font-size: 44px !important;
-    border-radius: 100%;
-}
-#divPlay {
-    position: relative;
-}
-#divPlay #clickToGetSomeFun {
-    position: absolute;
-    bottom: 0px;
-    opacity: 0.5;
-    font-family: cinzel;
-    margin-left: 10px;
-    font-size: 26px;
-    display: inline-block
-}
-#video-fullscreen {
+/* ----------------------------------------------Img fullscreen------------------------------ */
+#img-fullscreen {
     z-index: -1 ;
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-    opacity: 0.1;
+    opacity: 0.2;
 }
-
 
 
 
