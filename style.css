@@ -1,4 +1,4 @@
-/* -------------------Chống copy, bôi đen--------------------------------------------------------- */
+/* -------------------------------------Chống copy, bôi đen. Thêm font chữ mới--------------------------------------------------------- */
 body{
     -moz-user-select: none;
     -ms-user-select: none;
@@ -6,39 +6,116 @@ body{
     -webkit-user-select: none;
     -webkit-touch-callout: none;
 }
-
-/*  -------------------------------------------Navbar---------------------------------------------------------------------------- */
+@font-face {
+    src: url("./avengeance-heroic-avenger/AVENGEANCE\ HEROIC\ AVENGER.ttf");
+    font-family: avenger;
+}
+@font-face {
+    src: url("./bebas-neue/BebasNeue.otf");
+    font-family: netflix;
+}
+/*  -----------------------------------------------------Navbar---------------------------------------------------------------------------- */
 .navbar {
     width: 100%;
-    top: 0px;
-    background-color: rgba(40,40,40);
-    font-family: cinzel;
-    font-weight: bold;
+    font-family: netflix;
+    font-size: 25px;
+}
+.dropdown-item {
+    font-size: 25px;
+}
+.dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity:0;
+    transform: translateY(50px);
+    transition:.5s ease all;
+}
+.dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    opacity:1;
+    transform: translateY(0px);
+    transition:.5s ease all;
+}
+
+/* ------------Logo Movie----------------- */
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        margin-left: 25px !important;
+    }
+    .account-text {
+        margin-left: -23px !important;
+    }
+    #logo {
+        margin-top: 10px;
+        margin-left: -50px;
+    }
+    /* Cuộn lên xuống mờ thanh bar */
+    .bg-dark {
+        background: rgba(12,12,12) !important;
+        transition:0.2s ease;
+    }
+    .bg-dark.scrolled {
+        background: rgb(12, 12, 12) !important;
+    }
+}
+@media screen and (min-width:992px) {
+    /* Cuộn lên xuống mờ thanh bar */
+    .bg-dark {
+        background: rgba(12,12,12,0.1) !important;
+        transition:0.2s ease;
+    }
+    .bg-dark.scrolled {
+        background: rgb(12, 12, 12) !important;
+    }
 }
 .sticky-top {
     position: fixed;
 }
-.dropdown-menu {display: block;visibility: hidden;opacity:0;transform: translateY(50px);transition:.5s ease all;}
-.dropdown-menu.show {display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.5s ease all;}
+#logo {
+    width: 40px;
+    position: relative;
+    transform: rotate(-50deg);
+}
+#logo span {
+    color: red;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: monospace;
+    height: 120px;
+    position: absolute;
+    transform-origin: bottom center;
+}
+.char1 {
+    transform: rotate(30deg);
+}
 
-/* ------Cuộn lên xuống làm mờ thanh nav------ */
-.bg-dark {
-    background: rgba(40,40,40,0.9) !important;
-    transition:0.2s ease;
+.char2 {
+    transform: rotate(42deg);
 }
-.bg-dark.scrolled {
-    background: rgba(40,40,40,1) !important;
+
+.char3 {
+    transform: rotate(53deg);
 }
-/* ----Respnsive video youtube----- */
+
+.char4 {
+    transform: rotate(62deg);
+}
+
+.char5 {
+    transform: rotate(73deg);
+}
+
+/* -------Video ở nút Search----------- */
 #videoPhanTimKiem > iframe {
     width: 100% !important;
     height: 315px !important;
 }
-.modal-dialog{
+#staticBackdrop .modal-dialog{
     overflow-y: initial !important
 }
-.modal-body{
-    height: 65vh;
+#staticBackdrop .modal-body{
+    height: 80vh;
     overflow-y: auto;
 }
 
@@ -54,7 +131,6 @@ body{
 
 
 /*  --------------------------------------------Header video--------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Poppins:20");
 body{
     margin: 0;
     padding: 0;
@@ -62,6 +138,9 @@ body{
     height: 100%;
     color: white;
     background-color: rgba(0,0,0,0.9);
+}
+html {
+    scroll-behavior: smooth;
 }
 /* ----------Chữ phần header------------------------------ */
 .header-background {
@@ -72,8 +151,7 @@ body{
     position: absolute;
     z-index: 1;
     margin-left: 20px;
-    bottom: 106px;
-    font-family: cinzel;
+    bottom: 6vh;
     overflow: hidden;
 }
 .header-background #amazingslider-wrapper-3 {

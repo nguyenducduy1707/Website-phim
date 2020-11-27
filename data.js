@@ -240,21 +240,28 @@ function myFunction() {
 }
 
 // Hiển thị data
-for(item of data) {
+for(let i = 0; i < data.length; i++) {
     let oneFilm = `
     <tr>
         <td>
             <div style="display: block; text-align: center; font-family: cinzel ; font-size: 27px; font-weight: bold;">
-                ${item.title}
+                ${data[i].title}
             </div>
             <div style="width="100%" ; height="100%" id="videoPhanTimKiem">
-                <iframe width: "100%" height: "315px" src= ${item.src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                <iframe width: "100%" height: "315px" id = "${i}" src= ${data[i].src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
             </div>
         </td>
         <td style="font-family: Rokkitt; font-size: 22px;">
-            ${item.description}
+            ${data[i].description}
         </td>
     </tr>
     `;
     myTable.innerHTML += oneFilm;
+
+    $(function(){
+        $('.btnClose').click(function(){      
+                $(`#${i}`).attr('src', $(`#${i}`).attr('src'));
+        });
+    });
+    //
 }

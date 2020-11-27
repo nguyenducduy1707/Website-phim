@@ -13,30 +13,32 @@
     <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-4.css">
     <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-5.css">
     <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-6.css">
-
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-7.css">
     <!-- Font icon -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 </head>
 <body>
-  <button>bbbb</button>
     <div class="wrapper-all">
       <header>
         <!------------- Navbar ------>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand" href="#" onClick="window.location.reload();">Trailer</a>
+            <a class="navbar-brand" href="#" onClick="window.location.reload();" id="logo">
+              <span class="char1">M</span>
+              <span class="char2">O</span>
+              <span class="char3">V</span>
+              <span class="char4">I</span>
+              <span class="char5">E</span>
+            </a>
             <button class="navbar-toggler" id="navbar-toggle-id" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: black; margin-left: 120px;">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="#" >My list</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Genres
                   </a>
@@ -55,11 +57,13 @@
               </ul>
               <form class="form-inline my-2 my-lg-0" style="margin-right: 3px;">
                 <!-- <input class="form-control mr-sm-2" type="search" placeholder="Titles" aria-label="Search"> -->
-                <button class="btn btn-outline-dark my-2 my-sm-0 text-white" type="button" data-toggle="modal" data-target="#staticBackdrop">Search</button>
+                <button class="btn btn-dark my-2 my-sm-0 text-white" type="button" data-toggle="modal" data-target="#staticBackdrop" style="font-size: 25px;">
+                  <div class="active">Search</div>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 20px;">
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle account-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Your account
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -75,6 +79,7 @@
             </div>
         </nav>
         <!----------Video header -->
+        
         <div class="header-background">
           <!-- Video -->
           <div class="amazingslider-wrapper" id="amazingslider-wrapper-3" style="display:block;position:relative;max-width:100%;margin:0 auto;">
@@ -92,18 +97,17 @@
           </div>
           <!-- Chữ trên video header -->
           <h4>
-            <span style="font-weight: bold; font-size: 10vw; opacity: 0.7;">Upcoming</span>
-            <div class="btn-group-background" style="display: block;">
-              <button type="button" class="btn btn-outline-light btn-background" style="font-size: 24px; font-weight: bold;">
-                <i class="fa fa-info-circle"></i> Info
-              </button>
+            <div style="font-weight: bold; font-size: 15vw; opacity: 0.8; font-family: avenger; display: inline;">Upcoming
             </div>
+            <button type="button" class="btn btn-light btn-background" style="font-size: 24px; font-weight: bold; font-family: netflix !important; margin-left: 12px; margin-bottom: 33px;" onclick="open_and_move2()">
+              <i class="fa fa-info-circle"></i> Info
+            </button>
           </h4>
         </div>
         <!-------------------------->
       </header>
       <!-- Modal -->
-      <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade concac" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
@@ -123,16 +127,16 @@
               </table>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary btnClose" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
       <!--  -->
-
+  
       <!-- Image background -->
       <img src="./game_of_thrones-wallpaper-2560x1440.jpg" alt="" id="img-fullscreen">      
-      <!---------------------->      
+      <!----------------------> 
       <main>
         <!---------- Phân loại phim -------------------------------------------->
         <!-- Fantasy film -->
@@ -353,6 +357,8 @@
     <script src="sliderengine/initslider-4.js"></script>
     <script src="sliderengine/initslider-5.js"></script>
     <script src="sliderengine/initslider-6.js"></script>
+    <script src="sliderengine/initslider-7.js"></script>
+
     <!--  -->
     <script src="./index.js"></script>
     <script src="./data.js"></script>
