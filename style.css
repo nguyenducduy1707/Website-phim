@@ -111,18 +111,6 @@ body{
     width: 100% !important;
     height: 315px !important;
 }
-#staticBackdrop .modal-dialog{
-    overflow-y: initial !important
-}
-#staticBackdrop .modal-body{
-    height: 80vh;
-    overflow-y: auto;
-}
-@media screen and (max-width:1200px) {
-    iframe {
-        display: none;
-    }
-}
 
 
 
@@ -139,7 +127,6 @@ body{
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     height: 100%;
     color: white;
     background-color: rgba(0,0,0,0.9);
@@ -150,7 +137,6 @@ html {
 /* ----------Chữ phần header------------------------------ */
 .header-background {
     position: relative;
-    line-height: 0;
 }
 .header-background  h4 {
     position: absolute;
@@ -162,15 +148,69 @@ html {
 .header-background #amazingslider-wrapper-3 {
     position: absolute;
     z-index: 0;
-    opacity: 0.9;
     width: 100%;
 }
 .fa-info-circle {
     margin: 0 !important;
     padding: 0 !important;
     font-size: 24px !important;
-    border-radius: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------Modal Search------------------------------------------------------------ */
+
+#myInput {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 13px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+    border-right: 1px solid #ddd;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr:hover {
+    background-color: 	rgb(160,160,160);
+}
+#myTable tr.header {
+    background-color: rgb(128,128,128);
+}
+
 
 
 
@@ -275,38 +315,3 @@ ul {
 
 
 
-
-/* Input and modal  */
-
- #myInput {
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 13px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-}
-
-#myTable {
-    width: 100%;
-    border: 1px solid #ddd;
-    font-size: 18px;
-}
-
-#myTable th, #myTable td {
-    text-align: left;
-    padding: 12px;
-    border-right: 1px solid #ddd;
-}
-
-#myTable tr {
-    border-bottom: 1px solid #ddd;
-}
-
-#myTable tr:hover {
-    background-color: 	rgb(160,160,160);
-}
-#myTable tr.header {
-    background-color: rgb(128,128,128);
-}
