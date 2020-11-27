@@ -8,4 +8,3 @@ function open_and_move2(){
     win3=window.open("slider7.html","","width=600,height=500")
     win3.moveTo(screen.width/2-300,screen.height/2-250)
 }
-// Logo 

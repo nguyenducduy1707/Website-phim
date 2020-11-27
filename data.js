@@ -257,11 +257,10 @@ for(let i = 0; i < data.length; i++) {
     </tr>
     `;
     myTable.innerHTML += oneFilm;
-
+    // Sửa lỗi vẫn phát video khi thoát khỏi modal
     $(function(){
         $('.btnClose').click(function(){      
                 $(`#${i}`).attr('src', $(`#${i}`).attr('src'));
         });
     });
-    //
 }

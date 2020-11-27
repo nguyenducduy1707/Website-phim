@@ -47,7 +47,7 @@ body{
         margin-left: -23px !important;
     }
     #logo {
-        margin-top: 10px;
+        margin-top: -8px;
         margin-left: -50px;
     }
     /* Cuộn lên xuống mờ thanh bar */
@@ -80,18 +80,18 @@ body{
 #logo span {
     color: red;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 45px;
     font-family: monospace;
     height: 120px;
     position: absolute;
     transform-origin: bottom center;
 }
 .char1 {
-    transform: rotate(30deg);
+    transform: rotate(22deg);
 }
 
 .char2 {
-    transform: rotate(42deg);
+    transform: rotate(39deg);
 }
 
 .char3 {
@@ -99,11 +99,11 @@ body{
 }
 
 .char4 {
-    transform: rotate(62deg);
+    transform: rotate(66deg);
 }
 
 .char5 {
-    transform: rotate(73deg);
+    transform: rotate(80deg);
 }
 
 /* -------Video ở nút Search----------- */
@@ -117,6 +117,11 @@ body{
 #staticBackdrop .modal-body{
     height: 80vh;
     overflow-y: auto;
+}
+@media screen and (max-width:1200px) {
+    iframe {
+        display: none;
+    }
 }
 
 
@@ -212,7 +217,13 @@ p {
     font-size: 60px;
     margin-top: 200px;
 }
-
+#fantasy-text, #comedy-text {
+    margin-top: 100px;
+}
+main p{
+    font-family: netflix !important;
+    font-size: 80px;
+}
 
 
 
@@ -267,7 +278,7 @@ ul {
 
 /* Input and modal  */
 
-#myInput {
+ #myInput {
     background-position: 10px 10px;
     background-repeat: no-repeat;
     width: 100%;
@@ -281,8 +292,6 @@ ul {
     width: 100%;
     border: 1px solid #ddd;
     font-size: 18px;
-    height: 80vh;
-
 }
 
 #myTable th, #myTable td {
