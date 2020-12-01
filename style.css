@@ -39,16 +39,25 @@ body{
 }
 
 /* ------------Logo Movie----------------- */
-@media screen and (max-width: 991px) {
+/* Màn hình tối đa 991px */
+@media (max-width: 991px) {
     .navbar-collapse {
-        margin-left: 25px !important;
+        margin-left: 0px !important;
     }
     .account-text {
-        margin-left: -23px !important;
+        margin-left: 0px !important;
+    }
+    .modal-dialog {
+        max-width: 90%;
     }
     #logo {
         margin-top: -8px;
         margin-left: -50px;
+        display: none;
+    }
+    #videoPhanTimKiem > iframe {
+        width: 100% !important;
+        height: 1px !important;
     }
     /* Cuộn lên xuống mờ thanh bar */
     .bg-dark {
@@ -59,8 +68,13 @@ body{
         background: rgb(12, 12, 12) !important;
     }
 }
-@media screen and (min-width:992px) {
+/* Màn hình tối thiểu : 992px */
+@media (min-width:992px) {
     /* Cuộn lên xuống mờ thanh bar */
+    #logo {
+        margin-top: -18px;
+        margin-left: -20px;
+    }
     .bg-dark {
         background: rgba(12,12,12,0.1) !important;
         transition:0.2s ease;
@@ -287,7 +301,7 @@ main p{
 .footer-row li {
     margin-bottom: 10px;
     font-family: cinzel;
-    font-size: 20px;
+    font-size: 2vw;
 }
 ul {
     list-style-type: none;
