@@ -244,7 +244,7 @@ for(let i = 0; i < data.length; i++) {
     let oneFilm = `
     <tr>
         <td>
-            <div style="display: block; text-align: center; font-family: cinzel ; font-size: 27px; font-weight: bold;" id="title-modal-search">
+            <div style="display: block; text-align: center; font-family: netflix !important ; font-size: 27px;" id="title-modal-search">
                 ${data[i].title}
             </div>
             <div style="width="100%" ; height="100%" id="videoPhanTimKiem">

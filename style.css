@@ -88,7 +88,7 @@ body{
     transform: rotate(-50deg);
 }
 #logo span {
-    color: red;
+    color: rgb(253,195,6);
     font-weight: bold;
     font-size: 45px;
     font-family: monospace;
@@ -147,13 +147,15 @@ html {
 /* ----------Chữ phần header------------------------------ */
 .header-background {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 .header-background  h4 {
     position: absolute;
     z-index: 1;
-    margin-left: 20px;
-    bottom: 1vh;
-    overflow: hidden;
+    margin-right: 20px;
+    bottom: 12vw;
 }
 .header-background #amazingslider-wrapper-3 {
     position: absolute;
@@ -199,7 +201,6 @@ html {
 }
 #myTable {
     width: 100%;
-    border: 1px solid #ddd;
     font-size: 18px;
     background-color: white;
 }
@@ -209,7 +210,7 @@ html {
     border-right: 1px solid #ddd;
 }
 .modal-header, .modal-body, .modal-footer {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0);
     border: none;
 }
 .modal-body::-webkit-scrollbar {
@@ -219,9 +220,13 @@ html {
     border-bottom: 1px solid #ddd;
 }
 #myTable tr.header {
-    background-color: rgb(128,128,128);
+    background-color: rgb(253,195,6) ;
+    font-family: netflix !important;
 }
-
+#myTable tr.header, #myTable tr:hover {
+    background-color: rgb(253,195,6,0.8) ;
+    cursor: pointer;
+}
 
 
 
@@ -245,7 +250,7 @@ html {
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 
@@ -265,15 +270,22 @@ div .amazingslider-play-1, div .amazingslider-play-2 , div .amazingslider-play-3
     left: 0;
 }
 p {
-    font-size: 60px;
+    font-family: netflix !important;
+    font-size: 3vw !important;
     margin-top: 200px;
+}
+p::before {
+    content: "I";
+    background-color: rgb(253,195,6);
+    height: 100%;
+    color :  rgb(253,195,6);
+    border-radius: 25px
+}
+p:hover {
+    color :  rgb(253,195,6);
 }
 #fantasy-text, #comedy-text {
     margin-top: 100px;
-}
-main p{
-    font-family: netflix !important;
-    font-size: 80px;
 }
 
 
@@ -309,7 +321,7 @@ ul {
     padding: 20px;
     width: 30px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 5px ;
     border-radius: 50%;
     color: gray;
@@ -317,6 +329,7 @@ ul {
     margin: 3px;
 }
 .fa:hover {
+    color: gray;
     opacity: 0.7;
     cursor: pointer  ;
 }
