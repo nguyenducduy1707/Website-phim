@@ -260,10 +260,10 @@ html {
 
 /* ------------------------------------------------------Main--------------------------------------------------------------- */
 /* -------------------Làm mờ nút play------------------ */
-div .amazingslider-play-1, div .amazingslider-play-2, div .amazingslider-play-4, div .amazingslider-play-5, div .amazingslider-play-6 {
+div .amazingslider-play-1, div .amazingslider-play-2 , div .amazingslider-play-3 ,div .amazingslider-play-4, div .amazingslider-play-5, div .amazingslider-play-6 {
     opacity: 0;
-    height: 110%;
-    width: 110%;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
 }
@@ -278,8 +278,6 @@ main p{
     font-family: netflix !important;
     font-size: 80px;
 }
-
-
 
 
 
