@@ -55,12 +55,6 @@ body{
         margin-left: -50px;
         display: none;
     }
-    #navbar-toggle-id {
-        font-size: 40px;
-    }
-    .header-background {
-        margin-top: 87px;
-    }
     /* Cuộn lên xuống mờ thanh bar */
     .bg-dark {
         background: rgba(12,12,12) !important;
@@ -244,7 +238,7 @@ html {
 
 
 /* ----------------------------------------------Img fullscreen------------------------------ */
-#img-fullscreen {
+#vid-fullscreen {
     z-index: -1 ;
     position: fixed;
     right: 0;
