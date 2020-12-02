@@ -55,9 +55,11 @@ body{
         margin-left: -50px;
         display: none;
     }
-    #videoPhanTimKiem > iframe {
-        width: 100% !important;
-        height: 1px !important;
+    #navbar-toggle-id {
+        font-size: 40px;
+    }
+    .header-background {
+        margin-top: 87px;
     }
     /* Cuộn lên xuống mờ thanh bar */
     .bg-dark {
@@ -201,25 +203,26 @@ html {
     border: 1px solid #ddd;
     margin-bottom: 12px;
 }
-
 #myTable {
     width: 100%;
     border: 1px solid #ddd;
     font-size: 18px;
+    background-color: white;
 }
-
 #myTable th, #myTable td {
     text-align: left;
     padding: 12px;
     border-right: 1px solid #ddd;
 }
-
+.modal-header, .modal-body, .modal-footer {
+    background-color: rgba(0,0,0,0.8);
+    border: none;
+}
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
 #myTable tr {
     border-bottom: 1px solid #ddd;
-}
-
-#myTable tr:hover {
-    background-color: 	rgb(160,160,160);
 }
 #myTable tr.header {
     background-color: rgb(128,128,128);
