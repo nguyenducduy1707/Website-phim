@@ -265,7 +265,3 @@ for(let i = 0; i < data.length; i++) {
     });
 }
 // 
-let btnPlayHeaderBackground = document.getElementById("amazingslider-wrapper-3");
-btnPlayHeaderBackground.onclick = function() {
-    console.log("haha")
-}
