@@ -240,14 +240,14 @@ function displayData() {
         let oneFilm = `
         <tr>
             <td>
-                <div style="display: block; text-align: center; font-family: netflix !important ; font-size: 27px;" id="title-modal-search">
+                <div style="display: block; text-align: left; font-family: netflix !important ; font-size: 27px;" id="title-modal-search">
                     ${data[i].title}
                 </div>
-                <div style="width="100%" ; height="100%" id="videoPhanTimKiem">
-                    <iframe width: "100%" height: "315px" id = "${i}" src= ${data[i].src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                <div style="width="100%"; id="videoPhanTimKiem">
+                    <iframe id = "${i}" src= ${data[i].src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
                 </div>
             </td>
-            <td style="font-family: Rokkitt; font-size: 22px;">
+            <td style="font-family: Rokkitt; font-size: 1.5vw;">
                 ${data[i].description}
             </td>
         </tr>
@@ -280,10 +280,14 @@ let mainNav = document.getElementById("mainNav")
 let mainToggle = document.getElementById("mainToggle");
 var x = document.getElementsByTagName("main")[0];
 mainToggle.onclick = function() {
-    if(x.style.opacity != "0.1") {
-        x.style.opacity = "0.1"
+    if(x.style.opacity != "0.2") {
+        x.style.opacity = "0.2";
+        x.style.pointerEvents = "none"
     } else {
         x.style.opacity = "1"
+        x.style.pointerEvents = "all"
     }
 }
+
+//
 

@@ -6,6 +6,16 @@ body{
     -webkit-user-select: none;
     -webkit-touch-callout: none;
 }
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+}
+html {
+    scroll-behavior: smooth;
+}
 @font-face {
     src: url("./avengeance-heroic-avenger/AVENGEANCE\ HEROIC\ AVENGER.ttf");
     font-family: avenger;
@@ -26,8 +36,25 @@ body{
 .dropdown-item:hover {
     background-color: rgba(12,12,12,0.2)
 }
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    overflow: hidden;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    display: block;
+}      
+.dropdown:hover .dropdown-menu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+.sticky-top {
+    position: fixed;
+}
 /* ------------Logo Movie----------------- */
-/* Màn hình tối đa 991px */
+/* Màn hình tối đa 991px, thiết bị bé */
 @media (max-width: 991px) {
     .navbar-collapse {
         margin-left: 0px !important;
@@ -50,10 +77,12 @@ body{
     }
     .bg-dark.scrolled {
         background: rgb(12, 12, 12) !important;
+    }    
+    .navbar {
+        border-bottom: 2px solid rgb(253,195,6);
     }
-    
 }
-/* Màn hình tối thiểu : 992px */
+/* Màn hình tối thiểu : 992px, thiết bị lớn */
 @media (min-width:992px) {
     /* Cuộn lên xuống mờ thanh bar */
     #logo {
@@ -68,23 +97,7 @@ body{
         background: rgb(12, 12, 12) !important;
     }
 }
-.dropdown .dropdown-menu {
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    overflow: hidden;
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-    -webkit-transform: scale(1, 0);
-            transform: scale(1, 0);
-    display: block;
-}      
-.dropdown:hover .dropdown-menu {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-}
-.sticky-top {
-    position: fixed;
-}
+
 #logo {
     width: 40px;
     position: relative;
@@ -119,26 +132,12 @@ body{
     transform: rotate(80deg);
 }
 
-/* -------Video ở nút Search----------- */
-#videoPhanTimKiem > iframe {
-    width: 100% !important;
-    height: 315px !important;
-}
+
 
 
 
 
 /*  --------------------------------------------Header video--------------------------------------------------------- */
-body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: white;
-    background-color: rgba(0,0,0,0.9);
-}
-html {
-    scroll-behavior: smooth;
-}
 /* ----------Chữ phần header------------------------------ */
 .header-background {
     position: relative;
@@ -146,7 +145,7 @@ html {
     justify-content: flex-end;
     align-items: flex-end;
 }
-.header-background  h4 {
+.header-background h4 {
     position: absolute;
     z-index: 1;
     margin-right: 20px;
@@ -183,15 +182,36 @@ html {
 
 
 /* --------------------------------------------Modal Search------------------------------------------------------------ */
-
-#myInput {
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
+.modal-content {
+    border: 2px solid rgb(253,195,6);
+}
+.modal-title {
     width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 13px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
+}
+#myInput {
+    font-size: 18px;
+    border: 2px solid rgb(253,195,6);
+    padding-left: 2.375rem;
+    width: 230px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.has-search {
+    margin: 0px;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+#myInput:focus {
+    width: 50%;
 }
 #myTable {
     width: 100%;
@@ -199,7 +219,6 @@ html {
     background-color: white;
 }
 #myTable th, #myTable td {
-    text-align: left;
     padding: 12px;
     border-right: 1px solid #ddd;
 }
@@ -207,21 +226,44 @@ html {
     background-color: rgba(0,0,0);
     border: none;
 }
+.modal-body {
+    padding-top: 0px;
+}
 .modal-body::-webkit-scrollbar {
     display: none;
 }
 #myTable tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 10px solid #ddd;
+}
+#myTable th {
+    font-size: 27px;
+}
+th, tr {
+    cursor: auto;
+    pointer-events: none;
 }
 #myTable tr.header {
     background-color: rgb(253,195,6) ;
     font-family: netflix !important;
+    border-bottom: none;
 }
-#myTable tr.header, #myTable tr:hover {
-    background-color: rgb(253,195,6,0.8) ;
-    cursor: pointer;
+/* -------Video ở nút Search----------- */
+#videoPhanTimKiem > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
 }
-
+#videoPhanTimKiem {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
 
 
 
@@ -273,7 +315,7 @@ p::before {
     background-color: rgb(253,195,6);
     height: 100%;
     color :  rgb(253,195,6);
-    border-radius: 25px
+    border-radius: 25px;
 }
 p:hover {
     color :  rgb(253,195,6);
@@ -282,7 +324,7 @@ p:hover {
     margin-top: 100px;
 }
 
-button:focus {
+button:focus, input:focus {
     outline: none;
 }
 
@@ -340,7 +382,3 @@ ul {
 .back-to-top.scrolled {
     display: block;
 }
-
-
-
-

@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=test.css.map */
+.search {
+  right: 15px;
+  top: 30px;
+  position: absolute;
+  display: inline-block;
+}
+
+.search input {
+  width: 0px;
+  height: 34px;
+  background-color: #000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+  border: 1px solid transparent;
+  outline: none;
+  padding-left: 35px;
+  font-size: 16px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.search input.toggle {
+  width: 240px;
+  border-color: #fff;
+}
+
+.search img {
+  width: 18px;
+  left: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+}
+/*# sourceMappingURL=test.css.map */
