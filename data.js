@@ -217,51 +217,73 @@ let data = [
 ]
 
 // Modal tìm kiếm
-let myInput = document.getElementById("myInput");
-let myTable = document.getElementById("myTable");
-let bodyModal = document.getElementById("bodyModal")
-function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
+let input = document.getElementById("myInput");
+function myFunctionSearch() {
+    let filter = input.value.toUpperCase();
+    let table = document.getElementById("myTable");
+    let tr = table.getElementsByTagName("tr");
+    for (let i = 0; i < tr.length; i++) {
+        let td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            let txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+            } else {
+            tr[i].style.display = "none";
+            }
+        }       
+    }
+}
+// Hiển thị data
+function displayData() {
+    for(let i = 0; i < data.length; i++) {
+        let oneFilm = `
+        <tr>
+            <td>
+                <div style="display: block; text-align: center; font-family: netflix !important ; font-size: 27px;" id="title-modal-search">
+                    ${data[i].title}
+                </div>
+                <div style="width="100%" ; height="100%" id="videoPhanTimKiem">
+                    <iframe width: "100%" height: "315px" id = "${i}" src= ${data[i].src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                </div>
+            </td>
+            <td style="font-family: Rokkitt; font-size: 22px;">
+                ${data[i].description}
+            </td>
+        </tr>
+        `;
+        myTable.innerHTML += oneFilm;
+        // Sửa lỗi vẫn phát video khi thoát khỏi modal
+        $(function(){
+            $('.btnClose').click(function(){      
+                $(`#${i}`).attr('src', $(`#${i}`).attr('src'));
+                input.value = "";
+            });
+        });
+    }
+}
+displayData();
+
+// Click outside to close
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("show");
+        if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+            $(".navbar-toggler").click();
         }
-      }       
+    });
+});
+
+// 
+let mainNav = document.getElementById("mainNav")
+let mainToggle = document.getElementById("mainToggle");
+var x = document.getElementsByTagName("main")[0];
+mainToggle.onclick = function() {
+    if(x.style.opacity != "0.1") {
+        x.style.opacity = "0.1"
+    } else {
+        x.style.opacity = "1"
     }
 }
 
-// Hiển thị data
-for(let i = 0; i < data.length; i++) {
-    let oneFilm = `
-    <tr>
-        <td>
-            <div style="display: block; text-align: center; font-family: netflix !important ; font-size: 27px;" id="title-modal-search">
-                ${data[i].title}
-            </div>
-            <div style="width="100%" ; height="100%" id="videoPhanTimKiem">
-                <iframe width: "100%" height: "315px" id = "${i}" src= ${data[i].src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
-            </div>
-        </td>
-        <td style="font-family: Rokkitt; font-size: 22px;">
-            ${data[i].description}
-        </td>
-    </tr>
-    `;
-    myTable.innerHTML += oneFilm;
-    // Sửa lỗi vẫn phát video khi thoát khỏi modal
-    $(function(){
-        $('.btnClose').click(function(){      
-                $(`#${i}`).attr('src', $(`#${i}`).attr('src'));
-        });
-    });
-}
-// 

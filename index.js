@@ -1,7 +1,8 @@
 // Lướt xuống hiên rõ thanh bar
 $(window).scroll(function() {
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
-})
+    $('.back-to-top').toggleClass('scrolled', $(this).scrollTop() > 550);
+});
 
 // Click vào nút info để hiện thông tin phim sắp chiếu
 function open_and_move2(){

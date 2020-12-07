@@ -23,21 +23,9 @@ body{
 .dropdown-item {
     font-size: 25px;
 }
-.dropdown-menu {
-    display: block;
-    visibility: hidden;
-    opacity:0;
-    transform: translateY(50px);
-    transition:.5s ease all;
+.dropdown-item:hover {
+    background-color: rgba(12,12,12,0.2)
 }
-.dropdown-menu.show {
-    display: block;
-    visibility: visible;
-    opacity:1;
-    transform: translateY(0px);
-    transition:.5s ease all;
-}
-
 /* ------------Logo Movie----------------- */
 /* Màn hình tối đa 991px */
 @media (max-width: 991px) {
@@ -63,6 +51,7 @@ body{
     .bg-dark.scrolled {
         background: rgb(12, 12, 12) !important;
     }
+    
 }
 /* Màn hình tối thiểu : 992px */
 @media (min-width:992px) {
@@ -78,6 +67,20 @@ body{
     .bg-dark.scrolled {
         background: rgb(12, 12, 12) !important;
     }
+}
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    overflow: hidden;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    display: block;
+}      
+.dropdown:hover .dropdown-menu {
+    -webkit-transform: scale(1);
+            transform: scale(1);
 }
 .sticky-top {
     position: fixed;
@@ -125,14 +128,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
 /*  --------------------------------------------Header video--------------------------------------------------------- */
 body{
     margin: 0;
@@ -167,7 +162,6 @@ html {
     padding: 0 !important;
     font-size: 24px !important;
 }
-
 
 
 
@@ -243,7 +237,7 @@ html {
 
 
 /* ----------------------------------------------Img fullscreen------------------------------ */
-#vid-fullscreen {
+/* #vid-fullscreen {
     z-index: -1 ;
     position: fixed;
     right: 0;
@@ -251,7 +245,7 @@ html {
     min-width: 100%; 
     min-height: 100%;
     opacity: 0.1;
-}
+} */
 
 
 
@@ -288,6 +282,9 @@ p:hover {
     margin-top: 100px;
 }
 
+button:focus {
+    outline: none;
+}
 
 
 
@@ -317,7 +314,7 @@ ul {
     margin-left: 15px;
     height: 70px;
 }
-.fa {
+.footer-icon {
     padding: 20px;
     width: 30px;
     text-align: center;
@@ -332,6 +329,16 @@ ul {
     color: gray;
     opacity: 0.7;
     cursor: pointer  ;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 5px;
+    display: none;
+}
+.back-to-top.scrolled {
+    display: block;
 }
 
 
