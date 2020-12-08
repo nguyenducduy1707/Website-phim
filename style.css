@@ -28,10 +28,10 @@ html {
 .navbar {
     width: 100%;
     font-family: netflix;
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 .dropdown-item {
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 .dropdown-item:hover {
     background-color: rgba(12,12,12,0.2)
@@ -53,24 +53,12 @@ html {
 .sticky-top {
     position: fixed;
 }
-/* ------------Logo Movie----------------- */
+/* ---------------------Logo Movie-------------------- */
 /* Màn hình tối đa 991px, thiết bị bé */
 @media (max-width: 991px) {
-    .navbar-collapse {
-        margin-left: 0px !important;
-    }
-    .account-text {
-        margin-left: 0px !important;
-    }
-    .modal-dialog {
-        max-width: 90%;
-    }
     #logo {
-        margin-top: -8px;
-        margin-left: -50px;
         display: none;
     }
-    /* Cuộn lên xuống mờ thanh bar */
     .bg-dark {
         background: rgba(12,12,12) !important;
         transition:0.2s ease;
@@ -81,10 +69,15 @@ html {
     .navbar {
         border-bottom: 2px solid rgb(253,195,6);
     }
+    .navbar-collapse {
+        margin-left: 0px !important;
+    }
+    .account-text {
+        margin-left: 0px !important;
+    }
 }
 /* Màn hình tối thiểu : 992px, thiết bị lớn */
 @media (min-width:992px) {
-    /* Cuộn lên xuống mờ thanh bar */
     #logo {
         margin-top: -18px;
         margin-left: -20px;
@@ -97,7 +90,6 @@ html {
         background: rgb(12, 12, 12) !important;
     }
 }
-
 #logo {
     width: 40px;
     position: relative;
@@ -117,28 +109,21 @@ html {
 }
 
 .char2 {
-    transform: rotate(39deg);
+    transform: rotate(40deg);
 }
 
 .char3 {
-    transform: rotate(53deg);
+    transform: rotate(55deg);
 }
 
 .char4 {
-    transform: rotate(66deg);
+    transform: rotate(68deg);
 }
 
 .char5 {
-    transform: rotate(80deg);
+    transform: rotate(82deg);
 }
-
-
-
-
-
-
-/*  --------------------------------------------Header video--------------------------------------------------------- */
-/* ----------Chữ phần header------------------------------ */
+/*  --------------------------------------------Phần Header--------------------------------------------------------- */
 .header-background {
     position: relative;
     display: flex;
@@ -157,49 +142,48 @@ html {
     width: 100%;
 }
 .fa-info-circle {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 24px !important;
+    margin: 0 ;
+    padding: 0 ;
+    font-size: 1.5rem ;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#upcomingBtn {
+    font-size: 1.5rem;
+    font-family: netflix;
+    margin-bottom: 10%;
+    background-color: rgb(253,195,6);
+}
 /* --------------------------------------------Modal Search------------------------------------------------------------ */
-.modal-content {
-    border: 2px solid rgb(253,195,6);
+.modal-header, .modal-body, .modal-footer {
+    background-color: rgba(0,0,0);
+    border: none;
 }
 .modal-title {
     width: 100%;
 }
-#myInput {
-    font-size: 18px;
+.modal-content, #myInputSearch {
     border: 2px solid rgb(253,195,6);
+}
+.modal-body {
+    padding-top: 0px;
+}
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+#myInputSearch {
+    font-size: 1.125rem;
     padding-left: 2.375rem;
-    width: 230px;
+    width: 14.375rem;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-.has-search {
-    margin: 0px;
+#myInputSearch:focus {
+    width: 50%;
 }
-.has-search .form-control-feedback {
+.search-bar {
+    margin: 0;
+}
+.search-bar .icon-search {
     position: absolute;
     z-index: 2;
     display: block;
@@ -210,43 +194,32 @@ html {
     pointer-events: none;
     color: #aaa;
 }
-#myInput:focus {
-    width: 50%;
-}
-#myTable {
+#myTableSearch {
     width: 100%;
-    font-size: 18px;
     background-color: white;
 }
-#myTable th, #myTable td {
-    padding: 12px;
+#myTableSearch td {
+    padding: 0.75rem;
     border-right: 1px solid #ddd;
 }
-.modal-header, .modal-body, .modal-footer {
-    background-color: rgba(0,0,0);
-    border: none;
-}
-.modal-body {
-    padding-top: 0px;
-}
-.modal-body::-webkit-scrollbar {
-    display: none;
-}
-#myTable tr {
+#myTableSearch tr {
     border-bottom: 10px solid #ddd;
-}
-#myTable th {
-    font-size: 27px;
-}
-th, tr {
     cursor: auto;
     pointer-events: none;
 }
-#myTable tr.header {
+#myTableSearch tr.header {
     background-color: rgb(253,195,6) ;
     font-family: netflix !important;
     border-bottom: none;
+    font-size: 1.95vw;
 }
+#myTableSearch th {
+    cursor: auto;
+    pointer-events: none;
+    padding: 0.75rem;
+    border-right: 1px solid #ddd;
+}
+
 /* -------Video ở nút Search----------- */
 #videoPhanTimKiem > iframe {
     position: absolute;
@@ -264,35 +237,6 @@ th, tr {
     width: 100%;
     padding-top: 56.25%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----------------------------------------------Img fullscreen------------------------------ */
-/* #vid-fullscreen {
-    z-index: -1 ;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    opacity: 0.1;
-} */
-
-
-
-
-
 
 
 
@@ -345,27 +289,26 @@ button:focus, input:focus {
     width: 100%;
 }
 .footer-row li {
-    margin-bottom: 10px;
-    font-family: cinzel;
-    font-size: 2vw;
+    margin-bottom: 0.625rem;
+    font-family: netflix;
+    font-size: 1.75vw;
 }
 ul {
     list-style-type: none;
 }
 .icon {
-    margin-left: 15px;
-    height: 70px;
+    margin-left: 0.9375rem;
+    height: 4.375rem;
 }
 .footer-icon {
-    padding: 20px;
-    width: 30px;
+    padding: 1.25rem;
+    width: 1.875rem;
     text-align: center;
     text-decoration: none !important;
-    margin: 5px ;
+    margin: 0.3125rem ;
     border-radius: 50%;
     color: gray;
-    font-size: 35px;
-    margin: 3px;
+    font-size: 2.5vw;
 }
 .fa:hover {
     color: gray;

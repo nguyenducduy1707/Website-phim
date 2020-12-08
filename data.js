@@ -1,4 +1,5 @@
-let data = [
+// data film
+let dataFilm = [
     // Fantasy
     {
         title : "The Hunger Games 1",
@@ -215,79 +216,65 @@ let data = [
         src : "https://www.youtube.com/embed/VFsmuRPClr4?v=VFsmuRPClr4&ab_channel=WarnerBros.Pictures"
     }
 ]
-
-// Modal tìm kiếm
-let input = document.getElementById("myInput");
-function myFunctionSearch() {
-    let filter = input.value.toUpperCase();
-    let table = document.getElementById("myTable");
-    let tr = table.getElementsByTagName("tr");
+// Modal search
+let myTableSearch = document.getElementById("myTableSearch");
+let myInputSearch = document.getElementById("myInputSearch");
+myInputSearch.onkeyup = function searchFilm() {
+    let filter = myInputSearch.value.toUpperCase();
+    let tr = myTableSearch.getElementsByTagName("tr");
     for (let i = 0; i < tr.length; i++) {
         let td = tr[i].getElementsByTagName("td")[0];
         if (td) {
             let txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
+                tr[i].style.display = "";
             } else {
-            tr[i].style.display = "none";
+                tr[i].style.display = "none";
             }
-        }       
+        }
     }
 }
-// Hiển thị data
-function displayData() {
-    for(let i = 0; i < data.length; i++) {
+// Display dataFilm in modal search by clicking "Search" button
+function displayDataFilm() {
+    for(let i = 0; i < dataFilm.length; i++) {
         let oneFilm = `
         <tr>
             <td>
-                <div style="display: block; text-align: left; font-family: netflix !important ; font-size: 27px;" id="title-modal-search">
-                    ${data[i].title}
+                <div style="display: block; text-align: left; font-family: netflix !important ; font-size: 1.75vw;" id="title-modal-search">
+                    ${dataFilm[i].title}
                 </div>
                 <div style="width="100%"; id="videoPhanTimKiem">
-                    <iframe id = "${i}" src= ${data[i].src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                    <iframe id = "${i}" src= ${dataFilm[i].src} style="visibility:hidden;" onload="this.style.visibility = 'visible';" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
                 </div>
             </td>
             <td style="font-family: Rokkitt; font-size: 1.5vw;">
-                ${data[i].description}
+                ${dataFilm[i].description}
             </td>
         </tr>
         `;
-        myTable.innerHTML += oneFilm;
-        // Sửa lỗi vẫn phát video khi thoát khỏi modal
-        $(function(){
-            $('.btnClose').click(function(){      
-                $(`#${i}`).attr('src', $(`#${i}`).attr('src'));
-                input.value = "";
-            });
+        myTableSearch.innerHTML += oneFilm;
+        // Close all the embeded video when you close modal
+        $('.btnClose').click(function(){      
+            $(`#${i}`).attr('src', $(`#${i}`).attr('src'));
+            myInputSearch.value = "";
         });
     }
 }
-displayData();
-
-// Click outside to close
-$(document).ready(function () {
-    $(document).click(function (event) {
-        var clickover = $(event.target);
-        var _opened = $(".navbar-collapse").hasClass("show");
-        if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-            $(".navbar-toggler").click();
-        }
-    });
+let btnSearch = document.getElementById("searchBtn");
+let btnCloseModal = document.getElementById("btn-close_modal");
+btnSearch.onclick = function() {
+    btnSearch.innerHTML = "";
+    btnSearch.innerHTML = `
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="margin-bottom: 8px;"></span>
+    Searching...`;
+};
+$("#searchBtn").one("click", function(){
+    displayDataFilm();
 });
-
-// 
-let mainNav = document.getElementById("mainNav")
-let mainToggle = document.getElementById("mainToggle");
-var x = document.getElementsByTagName("main")[0];
-mainToggle.onclick = function() {
-    if(x.style.opacity != "0.2") {
-        x.style.opacity = "0.2";
-        x.style.pointerEvents = "none"
-    } else {
-        x.style.opacity = "1"
-        x.style.pointerEvents = "all"
-    }
+btnCloseModal.onclick = function() {
+    searchBtn.innerHTML = "";
+    searchBtn.innerHTML = "Search";
 }
 
-//
+
 
